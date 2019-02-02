@@ -35,3 +35,11 @@ class locators:
     ReceivedGifCard_Text_xpath = "//div[text()='Received a gift card?']"
     
     
+    #Cart Page 
+    
+    bag_text_xpath = "//li[text()='BAG']"
+    Delivery_text_xpath = "//li[text()='DELIVERY']"
+    Payment_text_xpath = "//li[text()='PAYMENT']"
+    SecureText_text_xpath = "//div[text()='100% SECURE']"
+    NeedHelpContactUs_text_Xpath = "//span[contains(text(),'Need Help ? Contact Us')]"
+    
