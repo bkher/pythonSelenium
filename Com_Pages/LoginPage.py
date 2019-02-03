@@ -18,14 +18,20 @@ class loginpage:
         ActionChains(self.driver).click(self.driver.find_element_by_xpath(self.login_Link_xpath)).perform()
               
     def enter_username(self, username):
-        self.driver.find_element_by_xpath(self.username_textbox_xpath).clear()
+        ele = self.driver.find_element_by_xpath(self.username_textbox_xpath).is_displayed()
+        assert ele ==True
+        #self.driver.find_element_by_xpath(self.username_textbox_xpath).clear()
         self.driver.find_element_by_xpath(self.username_textbox_xpath).send_keys(username)
 
     def enter_password(self, password):
-        self.driver.find_element_by_xpath(self.password_textbox_xpath).clear()
+        ele = self.driver.find_element_by_xpath(self.password_textbox_xpath).is_displayed()
+        assert ele ==True
+        #self.driver.find_element_by_xpath(self.password_textbox_xpath).clear()
         self.driver.find_element_by_xpath(self.password_textbox_xpath).send_keys(password)
 
     def click_login_button(self):
+        ele = self.driver.find_element_by_xpath(self.login_button_xpath).is_displayed()
+        assert ele ==True
         self.driver.find_element_by_xpath(self.login_button_xpath).click()
 
     
