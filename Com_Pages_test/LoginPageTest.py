@@ -5,6 +5,7 @@ from Com_Pages.HomePage import homepage
 from Com_Pages.ContactUs_Page import contactUsPage
 from Com_Pages.GiftCard_page import GiftCardPage
 from Com_Pages.Cart_Page import cartPage
+from UtilityPackage.Utility import utility
 import unittest
 import time
 from selenium.webdriver.common.keys import Keys
@@ -25,10 +26,11 @@ class loginTest(unittest.TestCase):
 
         driver.get("https://www.myntra.com")
         login = loginpage(driver)
+        ReadExcel = utility
         login.click_login_path()
         login.click_loginLink_button()
-        login.enter_username("bgtkher002@gmail.com")
-        login.enter_password("bgt@BGT123")
+        login.enter_username(ReadExcel.readExcel(self,1, 1))
+        login.enter_password(ReadExcel.readExcel(self,1, 2))
         login.click_login_button()
         time.sleep(3)
         
