@@ -10,17 +10,29 @@ class GiftCardPage:
         self.ReceivedGifCard_Text_xpath = locators.ReceivedGifCard_Text_xpath
        
     def sendGiftCardText(self):
-        print('send gift card text is displayed= ',self.driver.find_element_by_xpath(self.SendGiftCard_text_xpath).is_displayed())
+        ele = self.driver.find_element_by_xpath(self.SendGiftCard_text_xpath).is_displayed()
+        assert ele == True
+        #print('send gift card text is displayed= ',self.driver.find_element_by_xpath(self.SendGiftCard_text_xpath).is_displayed())
         
     def browseGiftcardText(self):
-        print('Browse gift card text is displayed= ', self.driver.find_element_by_xpath(self.browser_giftCard_text_xpath).is_displayed())
+        ele = self.driver.find_element_by_xpath(self.browser_giftCard_text_xpath).is_displayed()
+        assert ele == True
+        #print('Browse gift card text is displayed= ', self.driver.find_element_by_xpath(self.browser_giftCard_text_xpath).is_displayed())
         
     def ListOfOccassionsText(self):
-        ele = self.driver.find_elements_by_xpath(self.ListOfOccasionsBrowse_texts_xpath)
-        for i in ele:
-            print(i.text)
-        
+        occassations=[]
+        ele = self.driver.find_elements_by_xpath(self.ListOfOccasionsBrowse_texts_xpath).text
+        occassations.append(ele)
+        occasations1 = ["Wedding","Season's Greetings","Birthday","Look Good","Anniversary","Welcome","Best Wishes","Congrats","Good Luck","Best Mom","Best Dad"]
+
+        for i in occassations:
+            for j in occasations1:
+                if i==j:
+                    break
+                
     def ReceviedGiftcardText(self):
-        print('Received gift card text is displayed= ', self.driver.find_element_by_xpath(self.ReceivedGifCard_Text_xpath).is_displayed())
+        ele = self.driver.find_element_by_xpath(self.ReceivedGifCard_Text_xpath).is_displayed()
+        assert ele == True
+        #print('Received gift card text is displayed= ', self.driver.find_element_by_xpath(self.ReceivedGifCard_Text_xpath).is_displayed())
         
         
