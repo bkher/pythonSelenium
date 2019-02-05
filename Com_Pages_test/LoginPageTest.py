@@ -33,6 +33,7 @@ class loginTest(unittest.TestCase):
         login.enter_password(ReadExcel.readExcel(self,1, 2))
         login.click_login_button()
         time.sleep(3)
+        driver.save_screenshot("login done.png")
         
         homepagevar = homepage(driver)
         
@@ -43,7 +44,9 @@ class loginTest(unittest.TestCase):
         contactpage.NonOrderRelatedQuesry()
         contactpage.FrequentlyAsledQuestions()
         contactpage.Order_button()
+        driver.save_screenshot("Contact Us Page.png")
         time.sleep(3)
+        
         driver.back()
         
         homepagevar.click_GiftCard()
@@ -53,6 +56,7 @@ class loginTest(unittest.TestCase):
         giftpage.ListOfOccassionsText()
         giftpage.ReceviedGiftcardText()
         time.sleep(3)
+        driver.save_screenshot("Gift Card Page.png")
         driver.back()
         
         homepagevar.Click_Cart()
@@ -63,11 +67,13 @@ class loginTest(unittest.TestCase):
         CartPage.Needhelp_text()
         CartPage.Secure_text()
         time.sleep(3)
+        driver.save_screenshot("Cart Page.png")
         driver.back()
        
         time.sleep(3)
         login.click_login_path()
         homepagevar.click_logout()
+        driver.save_screenshot("logout done.png")
         
         
         

@@ -21,10 +21,10 @@ class GiftCardPage:
         
     def ListOfOccassionsText(self):
         occassations=[]
-        ele = self.driver.find_elements_by_xpath(self.ListOfOccasionsBrowse_texts_xpath).text
-        occassations.append(ele)
+        ele = self.driver.find_elements_by_xpath(self.ListOfOccasionsBrowse_texts_xpath)
+        for lst in ele:
+            occassations.append(lst.text)
         occasations1 = ["Wedding","Season's Greetings","Birthday","Look Good","Anniversary","Welcome","Best Wishes","Congrats","Good Luck","Best Mom","Best Dad"]
-
         for i in occassations:
             for j in occasations1:
                 if i==j:
