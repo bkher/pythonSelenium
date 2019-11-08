@@ -13,10 +13,9 @@ from selenium.webdriver.common.keys import Keys
 
 class loginTest(unittest.TestCase):
     
-    
     @classmethod
     def setUpClass(cls):
-        cls.driver = webdriver.Chrome("C:\\Users\\Bhagi\\Downloads\\chromedriver_win32\\chromedriver")
+        cls.driver = webdriver.Chrome("C:\\Users\\Bhagi\\Downloads\\chromedriver_win32 _78\\chromedriver.exe")
         cls.driver.implicitly_wait(10)
         cls.driver.maximize_window()
         
@@ -24,7 +23,7 @@ class loginTest(unittest.TestCase):
     def test_login_valid(self):
         driver = self.driver
 
-        driver.get("https://www.myntra.com")
+        driver.get("http://docitt-naf.lender.qa.lendfoundry.com/")
         login = loginpage(driver)
         ReadExcel = utility
         login.click_login_path()

@@ -1,5 +1,21 @@
 class locators:
-    #login object
+    # NAF Lender Portal
+
+#login object
+    Enter_UserName ="//*[@id='form']/div[1]/ui-container/div/ui-input/div/label[2]/parent::div/input"
+    Enter_Password ="//*[@id='form']/div[2]/ui-container/div/ui-input/div/label[2]/parent::div/input"
+    Click_Login= "//*[@id='acceptButton']/button"
+    WelcomeBack_text ="//*[@id='micro-app-host']/security-borrower-login/security-login/div[1]/div/div/h1"
+    OtherText ="//*[@id='micro-app-host']/security-borrower-login/security-login/div[1]/div/div/p"
+
+#HomePage Object
+    prosepectText ="//a[@data-filter='prospects']"
+    ApplicationText ="//a[@data-filter='application']"
+    ActiveText ="//a[@data-filter='active']"
+    PastClientsText ="//a[@data-filter='closed']"
+    LONameText ="//*[@id='micro-app-host']/lender-dashboard-header-panel/div/div/div[1]/div/p"
+    LORoleText ="//*[@id='micro-app-host']/lender-dashboard-header-panel/div/div/div[1]/div/p/span"
+
 
     myntra_logo_link ="//*[@id='desktop-header-cnt']/div[2]/div[1]/a"
     login_click_xpath = "//*[@id='desktop-header-cnt']/div[2]/div[2]/div/div[1]"
